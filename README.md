@@ -13,3 +13,9 @@ Input lines that contain empty values and invalid values are dropped.
 
 ## Program Output
 The program writes the average error over time periods. It also provides informational messages on dropped input lines and number of lines processed. Optional logging can be enabled to debug the program as needed using the 'loglevel' variable. The program can be further enhanced using Python's 'logging' module.
+
+## Precision
+In order to improve the precision of the average error, the prices have been converted from dollars to cents and the counts/totals are calculated in cents. Integer data types are used, which in Python 3 can accommodate a very high level of precision.
+
+## Improving Runtime with Pandas Data Frame
+Currently, the built-in read csv module is used to identify invalid data and provide feedback to the user. However, this module is slow with a runtime of 0.59 sec. Using a Pandas data frame, this runtime can be speeded up to 0.09 sec as documented in the 'pd.py' file.
